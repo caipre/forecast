@@ -1,0 +1,8 @@
+github "caipre/Publinks"
+github "caipre/DripIcons"
+github "caipre/FlatUIColors"
+github "delba/Log" "swift-3.0"
+github "harlanhaskins/Punctual.swift"
+github "radex/SwiftyTimer" "swift3"
+github "radex/SwiftyUserDefaults" "swift3"
+github "sxg/ForecastIO" "swift3"

@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010B4E8B1D88A45600B4B4CF /* SwiftyUserDefaults.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01BA354A1D885B0700C80267 /* SwiftyUserDefaults.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		010B4E8C1D88A45600B4B4CF /* SwiftyTimer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01BA35481D885B0200C80267 /* SwiftyTimer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		010B4E8E1D88A46600B4B4CF /* Log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010B4E8D1D88A46600B4B4CF /* Log.framework */; };
+		010B4E8F1D88A47100B4B4CF /* Log.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 010B4E8D1D88A46600B4B4CF /* Log.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		010B4E911D88A48A00B4B4CF /* FlatUIColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010B4E901D88A48A00B4B4CF /* FlatUIColors.framework */; };
+		010B4E921D88A49A00B4B4CF /* FlatUIColors.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 010B4E901D88A48A00B4B4CF /* FlatUIColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0158DE131D89C5480038F08D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158DE121D89C5480038F08D /* Location.swift */; };
+		0158DE181D89F8660038F08D /* ActiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158DE171D89F8660038F08D /* ActiveTextField.swift */; };
+		0158DE1C1D8A08DA0038F08D /* NSView+Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158DE1B1D8A08DA0038F08D /* NSView+Forecast.swift */; };
+		0158DE2E1D8A197B0038F08D /* DripIcons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0158DE2D1D8A197B0038F08D /* DripIcons.framework */; };
+		0158DE2F1D8A19880038F08D /* DripIcons.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0158DE2D1D8A197B0038F08D /* DripIcons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		019A734A1D87390000D6B18F /* PopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A73341D87390000D6B18F /* PopoverController.swift */; };
+		019A734C1D87390000D6B18F /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A73361D87390000D6B18F /* StatusItemController.swift */; };
+		019A734F1D87390000D6B18F /* ForecastIO.Icon+Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A733A1D87390000D6B18F /* ForecastIO.Icon+Forecast.swift */; };
+		019A73511D87390000D6B18F /* UnitAngle+Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A733C1D87390000D6B18F /* UnitAngle+Forecast.swift */; };
+		019A73551D87390000D6B18F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A73421D87390000D6B18F /* Weather.swift */; };
+		019A735B1D87390000D6B18F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A73491D87390000D6B18F /* AppDelegate.swift */; };
+		01BA353C1D87AB3900C80267 /* ForecastIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BA353A1D87AB3900C80267 /* ForecastIO.framework */; };
+		01BA353D1D87AB3900C80267 /* Publinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BA353B1D87AB3900C80267 /* Publinks.framework */; };
+		01BA353E1D87AB9100C80267 /* ForecastIO.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01BA353A1D87AB3900C80267 /* ForecastIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01BA353F1D87AB9100C80267 /* Publinks.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01BA353B1D87AB3900C80267 /* Publinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01BA35431D87AC5900C80267 /* Forecast.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BA35411D87AC5900C80267 /* Forecast.xib */; };
+		01BA35471D87AD0300C80267 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 01BA35451D87AD0300C80267 /* LICENSE */; };
+		01BA35491D885B0200C80267 /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BA35481D885B0200C80267 /* SwiftyTimer.framework */; };
+		01BA354B1D885B0700C80267 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BA354A1D885B0700C80267 /* SwiftyUserDefaults.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		01423C2C1D873A9900A92E92 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		010B28CE1D873BEA00E3E190 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0158DE2F1D8A19880038F08D /* DripIcons.framework in CopyFiles */,
+				01BA353E1D87AB9100C80267 /* ForecastIO.framework in CopyFiles */,
+				01BA353F1D87AB9100C80267 /* Publinks.framework in CopyFiles */,
+				010B4E8B1D88A45600B4B4CF /* SwiftyUserDefaults.framework in CopyFiles */,
+				010B4E8C1D88A45600B4B4CF /* SwiftyTimer.framework in CopyFiles */,
+				010B4E8F1D88A47100B4B4CF /* Log.framework in CopyFiles */,
+				010B4E921D88A49A00B4B4CF /* FlatUIColors.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		010B4E8D1D88A46600B4B4CF /* Log.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Log.framework; path = Carthage/Build/Mac/Log.framework; sourceTree = "<group>"; };
+		010B4E901D88A48A00B4B4CF /* FlatUIColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlatUIColors.framework; path = Carthage/Build/Mac/FlatUIColors.framework; sourceTree = "<group>"; };
+		0158DE121D89C5480038F08D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		0158DE171D89F8660038F08D /* ActiveTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTextField.swift; sourceTree = "<group>"; };
+		0158DE1B1D8A08DA0038F08D /* NSView+Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSView+Forecast.swift"; sourceTree = "<group>"; };
+		0158DE2D1D8A197B0038F08D /* DripIcons.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DripIcons.framework; path = Carthage/Build/Mac/DripIcons.framework; sourceTree = "<group>"; };
+		019A73221D8737BA00D6B18F /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		019A73341D87390000D6B18F /* PopoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverController.swift; sourceTree = "<group>"; };
+		019A73361D87390000D6B18F /* StatusItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		019A733A1D87390000D6B18F /* ForecastIO.Icon+Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForecastIO.Icon+Forecast.swift"; sourceTree = "<group>"; };
+		019A733C1D87390000D6B18F /* UnitAngle+Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UnitAngle+Forecast.swift"; sourceTree = "<group>"; };
+		019A73421D87390000D6B18F /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		019A73471D87390000D6B18F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019A73491D87390000D6B18F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01BA353A1D87AB3900C80267 /* ForecastIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ForecastIO.framework; path = Carthage/Build/Mac/ForecastIO.framework; sourceTree = "<group>"; };
+		01BA353B1D87AB3900C80267 /* Publinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Publinks.framework; path = Carthage/Build/Mac/Publinks.framework; sourceTree = "<group>"; };
+		01BA35421D87AC5900C80267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Forecast.xib; sourceTree = "<group>"; };
+		01BA35441D87AD0300C80267 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		01BA35451D87AD0300C80267 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		01BA35481D885B0200C80267 /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = Carthage/Build/Mac/SwiftyTimer.framework; sourceTree = "<group>"; };
+		01BA354A1D885B0700C80267 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/Mac/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		019A731F1D8737BA00D6B18F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0158DE2E1D8A197B0038F08D /* DripIcons.framework in Frameworks */,
+				010B4E911D88A48A00B4B4CF /* FlatUIColors.framework in Frameworks */,
+				010B4E8E1D88A46600B4B4CF /* Log.framework in Frameworks */,
+				01BA353C1D87AB3900C80267 /* ForecastIO.framework in Frameworks */,
+				01BA353D1D87AB3900C80267 /* Publinks.framework in Frameworks */,
+				01BA35491D885B0200C80267 /* SwiftyTimer.framework in Frameworks */,
+				01BA354B1D885B0700C80267 /* SwiftyUserDefaults.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0158DE161D89F2CA0038F08D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0158DE171D89F8660038F08D /* ActiveTextField.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		019A73171D87379600D6B18F = {
+			isa = PBXGroup;
+			children = (
+				019A73301D8737CF00D6B18F /* Metadata */,
+				01BA35401D87AC5900C80267 /* Base.lproj */,
+				019A73241D8737BA00D6B18F /* Sources */,
+				019A73231D8737BA00D6B18F /* Products */,
+				019A735C1D87399C00D6B18F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		019A73231D8737BA00D6B18F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				019A73221D8737BA00D6B18F /* Forecast.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		019A73241D8737BA00D6B18F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				019A73491D87390000D6B18F /* AppDelegate.swift */,
+				019A73401D87390000D6B18F /* Models */,
+				019A73331D87390000D6B18F /* Controllers */,
+				0158DE161D89F2CA0038F08D /* Classes */,
+				019A73381D87390000D6B18F /* Extensions */,
+				019A73471D87390000D6B18F /* Info.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		019A73301D8737CF00D6B18F /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				01BA35441D87AD0300C80267 /* README.md */,
+				01BA35451D87AD0300C80267 /* LICENSE */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+		019A73331D87390000D6B18F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				019A73341D87390000D6B18F /* PopoverController.swift */,
+				019A73361D87390000D6B18F /* StatusItemController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		019A73381D87390000D6B18F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				019A733A1D87390000D6B18F /* ForecastIO.Icon+Forecast.swift */,
+				0158DE1B1D8A08DA0038F08D /* NSView+Forecast.swift */,
+				019A733C1D87390000D6B18F /* UnitAngle+Forecast.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		019A73401D87390000D6B18F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				019A73421D87390000D6B18F /* Weather.swift */,
+				0158DE121D89C5480038F08D /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		019A735C1D87399C00D6B18F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0158DE2D1D8A197B0038F08D /* DripIcons.framework */,
+				010B4E901D88A48A00B4B4CF /* FlatUIColors.framework */,
+				010B4E8D1D88A46600B4B4CF /* Log.framework */,
+				01BA354A1D885B0700C80267 /* SwiftyUserDefaults.framework */,
+				01BA35481D885B0200C80267 /* SwiftyTimer.framework */,
+				01BA353A1D87AB3900C80267 /* ForecastIO.framework */,
+				01BA353B1D87AB3900C80267 /* Publinks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01BA35401D87AC5900C80267 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				01BA35411D87AC5900C80267 /* Forecast.xib */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		019A73211D8737BA00D6B18F /* Forecast macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019A732D1D8737BA00D6B18F /* Build configuration list for PBXNativeTarget "Forecast macOS" */;
+			buildPhases = (
+				019A731E1D8737BA00D6B18F /* Sources */,
+				019A731F1D8737BA00D6B18F /* Frameworks */,
+				019A73201D8737BA00D6B18F /* Resources */,
+				010B28CE1D873BEA00E3E190 /* CopyFiles */,
+			);
+			buildRules = (
+				01423C2C1D873A9900A92E92 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "Forecast macOS";
+			productName = "Forecast macOS";
+			productReference = 019A73221D8737BA00D6B18F /* Forecast.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		019A73181D87379600D6B18F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				TargetAttributes = {
+					019A73211D8737BA00D6B18F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B9YNE9L52C;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 019A731B1D87379600D6B18F /* Build configuration list for PBXProject "Forecast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 019A73171D87379600D6B18F;
+			productRefGroup = 019A73231D8737BA00D6B18F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				019A73211D8737BA00D6B18F /* Forecast macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		019A73201D8737BA00D6B18F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01BA35471D87AD0300C80267 /* LICENSE in Resources */,
+				01BA35431D87AC5900C80267 /* Forecast.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		019A731E1D8737BA00D6B18F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019A734A1D87390000D6B18F /* PopoverController.swift in Sources */,
+				0158DE131D89C5480038F08D /* Location.swift in Sources */,
+				019A73511D87390000D6B18F /* UnitAngle+Forecast.swift in Sources */,
+				0158DE1C1D8A08DA0038F08D /* NSView+Forecast.swift in Sources */,
+				019A734C1D87390000D6B18F /* StatusItemController.swift in Sources */,
+				019A73551D87390000D6B18F /* Weather.swift in Sources */,
+				0158DE181D89F8660038F08D /* ActiveTextField.swift in Sources */,
+				019A735B1D87390000D6B18F /* AppDelegate.swift in Sources */,
+				019A734F1D87390000D6B18F /* ForecastIO.Icon+Forecast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		01BA35411D87AC5900C80267 /* Forecast.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01BA35421D87AC5900C80267 /* Base */,
+			);
+			name = Forecast.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		019A731C1D87379600D6B18F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		019A731D1D87379600D6B18F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		019A732E1D8737BA00D6B18F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B9YNE9L52C;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.recurse.Forecast-macOS";
+				PRODUCT_NAME = Forecast;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		019A732F1D8737BA00D6B18F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B9YNE9L52C;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.recurse.Forecast-macOS";
+				PRODUCT_NAME = Forecast;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		019A731B1D87379600D6B18F /* Build configuration list for PBXProject "Forecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019A731C1D87379600D6B18F /* Debug */,
+				019A731D1D87379600D6B18F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019A732D1D8737BA00D6B18F /* Build configuration list for PBXNativeTarget "Forecast macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019A732E1D8737BA00D6B18F /* Debug */,
+				019A732F1D8737BA00D6B18F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 019A73181D87379600D6B18F /* Project object */;
+}

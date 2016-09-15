@@ -1,0 +1,8 @@
+github "caipre/DripIcons" "0.4"
+github "caipre/FlatUIColors" "0.5"
+github "sxg/ForecastIO" "edbace4cff823f372409f279f0301e82907fb98e"
+github "delba/Log" "7cdd25422de93cac0bde2ffaa671a0403dc9084b"
+github "caipre/Publinks" "0.2"
+github "harlanhaskins/Punctual.swift" "1.0.0"
+github "radex/SwiftyTimer" "f3e4b9f6f10a48e433c7f61ba344f0cada218077"
+github "radex/SwiftyUserDefaults" "21b7687d89b04267c8233f74e503558b63fb699e"

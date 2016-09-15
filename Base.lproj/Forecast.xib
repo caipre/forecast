@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A313a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11198.2"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="jRn-jx-YjK" id="DAJ-sJ-tIs"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="jRn-jx-YjK" customClass="AppDelegate" customModule="Forecast" customModuleProvider="target"/>
+        <customView id="gS3-Bd-8zT" userLabel="Canvas">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="248"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sqa-kb-72D" userLabel="Location">
+                    <rect key="frame" x="18" y="206" width="91" height="20"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New York, NY" id="pZ4-dl-vWc">
+                        <font key="font" size="14" name="HelveticaNeue"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y2t-Wn-217" userLabel="Summary">
+                    <rect key="frame" x="18" y="174" width="78" height="32"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sunny" id="7yy-H8-j9s">
+                        <font key="font" size="26" name="HelveticaNeue"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="252" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="psv-V8-Vni" userLabel="Temperature" customClass="ActiveTextField" customModule="Forecast" customModuleProvider="target">
+                    <rect key="frame" x="217" y="168" width="95" height="65"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="123" placeholderString="" id="fdh-Aa-dHH">
+                        <font key="font" size="54" name="HelveticaNeue-Light"/>
+                        <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="changeDisplayUnitSystemWithSender:" target="IjG-Sd-cdW" id="nwe-xS-dhP"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Meq-Cq-PUW" userLabel="Degree mark">
+                    <rect key="frame" x="303" y="199" width="19" height="29"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="◦" id="7EV-Qb-Ej1">
+                        <font key="font" size="24" name="HelveticaNeue-Bold"/>
+                        <color key="textColor" white="0.34999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1gy-VF-Dds">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="148"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="3Yr-ZM-KtR">
+                            <rect key="frame" x="0.0" y="0.0" width="85" height="148"/>
+                            <subviews>
+                                <textField identifier="day" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="evV-XZ-1Go" userLabel="Day">
+                                    <rect key="frame" x="25" y="121" width="35" height="17"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MON" id="Ke2-aa-ySv">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" red="0.70912425400000001" green="0.70912425400000001" blue="0.70912425400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="symbol" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="dg2-rG-g8f" userLabel="Symbol">
+                                    <rect key="frame" x="33" y="62" width="19" height="44"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="/" id="Zkx-so-yVj">
+                                        <font key="font" metaFont="system" size="36"/>
+                                        <color key="textColor" red="1" green="0.92156862750000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <allowedInputSourceLocales>
+                                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                        </allowedInputSourceLocales>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="high" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="q52-8x-MIi" userLabel="High">
+                                    <rect key="frame" x="29" y="24" width="28" height="23"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="54º" placeholderString="" id="xBm-Og-wR1">
+                                        <font key="font" size="16" name="HelveticaNeue-Light"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="low" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="Z4c-so-LWA" userLabel="Low">
+                                    <rect key="frame" x="32" y="10" width="22" height="19"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="48º" placeholderString="" id="LTY-6A-h0O">
+                                        <font key="font" size="12" name="HelveticaNeue-Light"/>
+                                        <color key="textColor" red="0.66274509800000003" green="0.70196078429999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="dg2-rG-g8f" firstAttribute="centerX" secondItem="3Yr-ZM-KtR" secondAttribute="centerX" id="3yM-Oh-PiH"/>
+                                <constraint firstItem="dg2-rG-g8f" firstAttribute="top" secondItem="evV-XZ-1Go" secondAttribute="bottom" constant="15" id="KAe-23-sza"/>
+                                <constraint firstItem="Z4c-so-LWA" firstAttribute="centerX" secondItem="3Yr-ZM-KtR" secondAttribute="centerX" id="PjA-6s-mPn"/>
+                                <constraint firstItem="evV-XZ-1Go" firstAttribute="top" secondItem="3Yr-ZM-KtR" secondAttribute="top" constant="10" id="VdF-ID-5DE"/>
+                                <constraint firstAttribute="bottom" secondItem="Z4c-so-LWA" secondAttribute="bottom" constant="10" id="b1D-92-yLT"/>
+                                <constraint firstItem="q52-8x-MIi" firstAttribute="top" secondItem="dg2-rG-g8f" secondAttribute="bottom" constant="15" id="fa0-hp-4Aq"/>
+                                <constraint firstItem="q52-8x-MIi" firstAttribute="centerX" secondItem="3Yr-ZM-KtR" secondAttribute="centerX" id="mON-M1-jCK"/>
+                                <constraint firstItem="q52-8x-MIi" firstAttribute="bottom" secondItem="Z4c-so-LWA" secondAttribute="top" constant="5" id="sxE-Rb-poT"/>
+                                <constraint firstItem="evV-XZ-1Go" firstAttribute="centerX" secondItem="3Yr-ZM-KtR" secondAttribute="centerX" id="ulp-Qg-uXK"/>
+                            </constraints>
+                        </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="VKI-N6-4EV">
+                            <rect key="frame" x="85" y="0.0" width="85" height="148"/>
+                            <subviews>
+                                <textField identifier="day" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMn-Hw-IfC" userLabel="Day">
+                                    <rect key="frame" x="27" y="121" width="30" height="17"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="TUE" id="0ov-ks-TmN">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" red="0.70912425400000001" green="0.70912425400000001" blue="0.70912425400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="symbol" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-mn-HKd" userLabel="Symbol">
+                                    <rect key="frame" x="33" y="62" width="19" height="44"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="/" id="CiV-4p-hDF">
+                                        <font key="font" metaFont="system" size="36"/>
+                                        <color key="textColor" red="1" green="0.92156862750000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <allowedInputSourceLocales>
+                                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                        </allowedInputSourceLocales>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="high" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="iwS-bO-Mhh" userLabel="High">
+                                    <rect key="frame" x="28" y="24" width="28" height="23"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="54º" placeholderString="" id="Rtb-Qb-pOR">
+                                        <font key="font" size="16" name="HelveticaNeue-Light"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="low" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="JEt-SB-cik" userLabel="Low">
+                                    <rect key="frame" x="31" y="10" width="22" height="19"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="48º" placeholderString="" id="7zs-mN-The">
+                                        <font key="font" size="12" name="HelveticaNeue-Light"/>
+                                        <color key="textColor" red="0.66274509800000003" green="0.70196078429999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="JEt-SB-cik" secondAttribute="bottom" constant="10" id="0rr-J9-B6B"/>
+                                <constraint firstItem="bMn-Hw-IfC" firstAttribute="centerX" secondItem="VKI-N6-4EV" secondAttribute="centerX" id="2v3-XK-g5X"/>
+                                <constraint firstItem="C4x-mn-HKd" firstAttribute="centerX" secondItem="VKI-N6-4EV" secondAttribute="centerX" id="Azp-e3-gyt"/>
+                                <constraint firstItem="JEt-SB-cik" firstAttribute="centerX" secondItem="VKI-N6-4EV" secondAttribute="centerX" id="IQl-vj-Zbm"/>
+                                <constraint firstItem="bMn-Hw-IfC" firstAttribute="top" secondItem="VKI-N6-4EV" secondAttribute="top" constant="10" id="RiI-Uh-sTq"/>
+                                <constraint firstItem="iwS-bO-Mhh" firstAttribute="centerX" secondItem="VKI-N6-4EV" secondAttribute="centerX" id="Sbd-St-vtF"/>
+                                <constraint firstItem="C4x-mn-HKd" firstAttribute="top" secondItem="bMn-Hw-IfC" secondAttribute="bottom" constant="15" id="fbn-0n-Qj4"/>
+                                <constraint firstItem="iwS-bO-Mhh" firstAttribute="bottom" secondItem="JEt-SB-cik" secondAttribute="top" constant="5" id="hLd-xB-BVT"/>
+                                <constraint firstItem="iwS-bO-Mhh" firstAttribute="top" secondItem="C4x-mn-HKd" secondAttribute="bottom" constant="15" id="rTk-IB-KRg"/>
+                            </constraints>
+                        </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="x5c-KH-1CX">
+                            <rect key="frame" x="170" y="0.0" width="85" height="148"/>
+                            <subviews>
+                                <textField identifier="day" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-Gi-ejN" userLabel="Day">
+                                    <rect key="frame" x="26" y="121" width="34" height="17"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WED" id="OEM-Hx-tqB">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" red="0.70912425400000001" green="0.70912425400000001" blue="0.70912425400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="symbol" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-zi-GTp" userLabel="Symbol">
+                                    <rect key="frame" x="33" y="62" width="19" height="44"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="/" id="VKw-cd-e0d">
+                                        <font key="font" metaFont="system" size="36"/>
+                                        <color key="textColor" red="1" green="0.92156862750000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <allowedInputSourceLocales>
+                                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                        </allowedInputSourceLocales>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="high" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="Ocv-dX-TVk" userLabel="High">
+                                    <rect key="frame" x="29" y="24" width="28" height="23"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="54º" placeholderString="" id="BFe-Lo-KdN">
+                                        <font key="font" size="16" name="HelveticaNeue-Light"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="low" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="8Lu-la-dTk" userLabel="Low">
+                                    <rect key="frame" x="32" y="10" width="22" height="19"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="48º" placeholderString="" id="2m9-R9-Man">
+                                        <font key="font" size="12" name="HelveticaNeue-Light"/>
+                                        <color key="textColor" red="0.66274509800000003" green="0.70196078429999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="8Lu-la-dTk" secondAttribute="bottom" constant="10" id="2Da-lV-0ux"/>
+                                <constraint firstItem="Ocv-dX-TVk" firstAttribute="bottom" secondItem="8Lu-la-dTk" secondAttribute="top" constant="5" id="KYO-CA-TtU"/>
+                                <constraint firstItem="XO7-zi-GTp" firstAttribute="top" secondItem="xBg-Gi-ejN" secondAttribute="bottom" constant="15" id="LIm-0t-ONf"/>
+                                <constraint firstItem="xBg-Gi-ejN" firstAttribute="top" secondItem="x5c-KH-1CX" secondAttribute="top" constant="10" id="MhF-iY-4kQ"/>
+                                <constraint firstItem="xBg-Gi-ejN" firstAttribute="centerX" secondItem="x5c-KH-1CX" secondAttribute="centerX" id="aJB-M4-F6K"/>
+                                <constraint firstItem="Ocv-dX-TVk" firstAttribute="centerX" secondItem="x5c-KH-1CX" secondAttribute="centerX" id="rp9-ol-Az1"/>
+                                <constraint firstItem="Ocv-dX-TVk" firstAttribute="top" secondItem="XO7-zi-GTp" secondAttribute="bottom" constant="15" id="um0-sI-QOb"/>
+                                <constraint firstItem="XO7-zi-GTp" firstAttribute="centerX" secondItem="x5c-KH-1CX" secondAttribute="centerX" id="z9d-nA-f0r"/>
+                                <constraint firstItem="8Lu-la-dTk" firstAttribute="centerX" secondItem="x5c-KH-1CX" secondAttribute="centerX" id="zq1-1Y-7m3"/>
+                            </constraints>
+                        </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="kzh-qN-S73">
+                            <rect key="frame" x="255" y="0.0" width="85" height="148"/>
+                            <subviews>
+                                <textField identifier="day" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EAM-hh-WpW" userLabel="Day">
+                                    <rect key="frame" x="27" y="121" width="32" height="17"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="THU" id="3Bp-SH-Va2">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" red="0.70912425400000001" green="0.70912425400000001" blue="0.70912425400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="symbol" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="eip-X3-Czc" userLabel="Symbol">
+                                    <rect key="frame" x="33" y="62" width="19" height="44"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="/" id="knO-OZ-tI4">
+                                        <font key="font" metaFont="system" size="36"/>
+                                        <color key="textColor" red="1" green="0.92156862750000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <allowedInputSourceLocales>
+                                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                        </allowedInputSourceLocales>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="high" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="2aH-Xu-0u4" userLabel="High">
+                                    <rect key="frame" x="29" y="24" width="28" height="23"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="54º" placeholderString="" id="gao-YA-JNY">
+                                        <font key="font" size="16" name="HelveticaNeue-Light"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField identifier="low" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="q8L-ig-H8h" userLabel="Low">
+                                    <rect key="frame" x="32" y="10" width="22" height="19"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="48º" placeholderString="" id="l66-4w-m2x">
+                                        <font key="font" size="12" name="HelveticaNeue-Light"/>
+                                        <color key="textColor" red="0.66274509800000003" green="0.70196078429999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="EAM-hh-WpW" firstAttribute="centerX" secondItem="kzh-qN-S73" secondAttribute="centerX" id="3UA-iT-Pth"/>
+                                <constraint firstItem="eip-X3-Czc" firstAttribute="centerX" secondItem="kzh-qN-S73" secondAttribute="centerX" id="5QO-3s-5fg"/>
+                                <constraint firstItem="eip-X3-Czc" firstAttribute="top" secondItem="EAM-hh-WpW" secondAttribute="bottom" constant="15" id="5Ze-rS-Cpr"/>
+                                <constraint firstItem="EAM-hh-WpW" firstAttribute="top" secondItem="kzh-qN-S73" secondAttribute="top" constant="10" id="9qA-kR-DqN"/>
+                                <constraint firstItem="2aH-Xu-0u4" firstAttribute="centerX" secondItem="kzh-qN-S73" secondAttribute="centerX" id="C9l-iq-iWH"/>
+                                <constraint firstItem="2aH-Xu-0u4" firstAttribute="top" secondItem="eip-X3-Czc" secondAttribute="bottom" constant="15" id="Ioc-Na-u9a"/>
+                                <constraint firstAttribute="bottom" secondItem="q8L-ig-H8h" secondAttribute="bottom" constant="10" id="bbJ-dk-A1l"/>
+                                <constraint firstItem="q8L-ig-H8h" firstAttribute="centerX" secondItem="kzh-qN-S73" secondAttribute="centerX" id="iqh-xe-Ftl"/>
+                                <constraint firstItem="2aH-Xu-0u4" firstAttribute="bottom" secondItem="q8L-ig-H8h" secondAttribute="top" constant="5" id="rjf-qd-hs9"/>
+                            </constraints>
+                        </customView>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <textField horizontalHuggingPriority="252" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8oD-zI-xqH" userLabel="Symbol">
+                    <rect key="frame" x="182" y="179" width="40" height="44"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="@" id="bBc-4U-ebT">
+                        <font key="font" metaFont="system" size="36"/>
+                        <color key="textColor" red="0.70912425400000001" green="0.70912425400000001" blue="0.70912425400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <allowedInputSourceLocales>
+                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                        </allowedInputSourceLocales>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Y2t-Wn-217" firstAttribute="top" secondItem="sqa-kb-72D" secondAttribute="bottom" id="359-Ly-sTO"/>
+                <constraint firstItem="Meq-Cq-PUW" firstAttribute="leading" secondItem="psv-V8-Vni" secondAttribute="trailing" constant="-5" id="7yQ-Hq-Vq0"/>
+                <constraint firstItem="1gy-VF-Dds" firstAttribute="top" secondItem="psv-V8-Vni" secondAttribute="bottom" constant="20" id="NoU-ss-m9G"/>
+                <constraint firstItem="1gy-VF-Dds" firstAttribute="width" secondItem="gS3-Bd-8zT" secondAttribute="width" id="TiV-CG-d9Y"/>
+                <constraint firstItem="sqa-kb-72D" firstAttribute="leading" secondItem="gS3-Bd-8zT" secondAttribute="leading" constant="20" id="U9Z-Pp-3Nz"/>
+                <constraint firstItem="Meq-Cq-PUW" firstAttribute="top" secondItem="gS3-Bd-8zT" secondAttribute="top" constant="20" id="VjC-Ly-Mzv"/>
+                <constraint firstItem="psv-V8-Vni" firstAttribute="top" secondItem="Meq-Cq-PUW" secondAttribute="bottom" constant="-34" id="YIb-h5-Xtb"/>
+                <constraint firstItem="1gy-VF-Dds" firstAttribute="centerX" secondItem="gS3-Bd-8zT" secondAttribute="centerX" id="jES-4r-2Ii"/>
+                <constraint firstItem="Y2t-Wn-217" firstAttribute="baseline" secondItem="psv-V8-Vni" secondAttribute="baseline" id="jnk-97-zv5"/>
+                <constraint firstItem="Y2t-Wn-217" firstAttribute="leading" secondItem="sqa-kb-72D" secondAttribute="leading" id="prq-9A-pwX"/>
+                <constraint firstItem="8oD-zI-xqH" firstAttribute="centerY" secondItem="psv-V8-Vni" secondAttribute="centerY" id="qVd-g2-Sj1"/>
+                <constraint firstItem="psv-V8-Vni" firstAttribute="leading" secondItem="8oD-zI-xqH" secondAttribute="trailing" constant="-1" id="sJD-Vg-StK"/>
+                <constraint firstAttribute="trailing" secondItem="Meq-Cq-PUW" secondAttribute="trailing" constant="20" id="sVn-uq-39P"/>
+                <constraint firstAttribute="bottom" secondItem="1gy-VF-Dds" secondAttribute="bottom" id="wcz-L8-ChQ"/>
+            </constraints>
+            <point key="canvasLocation" x="75" y="-553"/>
+        </customView>
+        <popover id="0bM-DJ-mpA">
+            <connections>
+                <outlet property="contentViewController" destination="IjG-Sd-cdW" id="jVL-7Y-cd1"/>
+            </connections>
+        </popover>
+        <customObject id="IjG-Sd-cdW" userLabel="Popover" customClass="PopoverController" customModule="Forecast" customModuleProvider="target">
+            <connections>
+                <outlet property="_canvas" destination="gS3-Bd-8zT" id="9md-c7-ZE2"/>
+                <outlet property="_conditions" destination="Y2t-Wn-217" id="Z2y-eB-Mbu"/>
+                <outlet property="_degree" destination="Meq-Cq-PUW" id="Dsi-4l-FJf"/>
+                <outlet property="_forecast" destination="1gy-VF-Dds" id="IPC-Qo-Xvr"/>
+                <outlet property="_location" destination="sqa-kb-72D" id="6XB-1M-L6M"/>
+                <outlet property="_symbol" destination="8oD-zI-xqH" id="5T1-eC-hyC"/>
+                <outlet property="_temperature" destination="psv-V8-Vni" id="x6O-KC-jlB"/>
+                <outlet property="view" destination="gS3-Bd-8zT" id="SGi-vg-Cwr"/>
+            </connections>
+        </customObject>
+        <customObject id="Kmk-LS-KTX" userLabel="StatusItem" customClass="StatusItemController" customModule="Forecast" customModuleProvider="target">
+            <connections>
+                <outlet property="_popover" destination="0bM-DJ-mpA" id="cIh-oQ-MmY"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>
