@@ -1,5 +1,5 @@
-Forecast
---------
+Forecast - [Download](https://github.com/caipre/forecast/releases/download/0.1.1/forecast.app.gz)
+-------------------------------------------------------------------------------------------------
 
 ![Screenshot](screenshot.png)
 
