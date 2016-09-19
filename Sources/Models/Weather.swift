@@ -32,7 +32,7 @@ class Weather {
         Timer.every(15.minutes, self.requestData)
     }
     
-    func temperature(for datapoint: DataPoint?, property: ApparantTemperature) -> String? {
+    func temperature(for datapoint: DataPoint?, property: ApparentTemperature) -> String? {
         let val: Float?
         switch property {
         case .realfeel:
@@ -63,7 +63,7 @@ class Weather {
         }
     }
     
-    enum ApparantTemperature {
+    enum ApparentTemperature {
         case realfeel, high, low
     }
     
